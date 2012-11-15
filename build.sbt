@@ -1,4 +1,4 @@
-name := "shapeless-examples"
+name := "stereotypes-with-shapeless"
 
 scalaVersion := "2.10.0-RC2"
 
