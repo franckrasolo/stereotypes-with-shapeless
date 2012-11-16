@@ -9,17 +9,17 @@ class StereotypesSuite extends FunSuite {
 
   trait Examples extends Stereotypes {
     val australia  = Stereotype("australia",  "a person from australia",   List("aussie", "legend"))
-    val newzealand = Stereotype("newzealand", "a person from new zealand", List("kiwi"))
+    val newZealand = Stereotype("newzealand", "a person from new zealand", List("kiwi"))
     val preston    = Stereotype("preston",    "a person from preston",     List("scally"))
     val liverpool  = Stereotype("liverpool",  "a person from liverpool",   List("scouser", "thief"))
     val manchester = Stereotype("manchester", "a person from manchester",  List("manc", "mancunian", "fighter"))
 
-    val stereotypes = List(australia, newzealand, preston, liverpool, manchester)
+    val stereotypes = List(australia, newZealand, preston, liverpool, manchester)
   }
 
   test("find by description") {
     new Examples {
-      assert(find("a person from new zealand") === Right(newzealand))
+      assert(find("a person from new zealand") === Right(newZealand))
     }
   }
 
