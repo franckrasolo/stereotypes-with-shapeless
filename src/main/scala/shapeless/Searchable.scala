@@ -1,5 +1,7 @@
 package shapeless
 
+// copied verbatim from https://gist.github.com/4069006
+
 trait Searchable[A, Q] {
   def find(p: Q => Boolean)(a: A): Option[Q]
 }
