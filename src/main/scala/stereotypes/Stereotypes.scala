@@ -12,6 +12,6 @@ trait Stereotypes {
   protected def find(predicate: String => Boolean)(term: String) =
     stereotypes.find(_.deepFind(predicate).isDefined).toRight(message(term))
 
-  private def message(term: String) = "Invalid Stereotype [%s]. Must be one of [%s]".format(term, allowedTerms)
+  private def message(term: String) = s"Invalid Stereotype [$term]. Must be one of [$allowedTerms]"
   private lazy val allowedTerms = stereotypes.flatMap(s => s.name :: s.description :: s.aliases).sorted.mkString(", ")
 }
