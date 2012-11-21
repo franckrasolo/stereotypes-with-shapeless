@@ -15,6 +15,7 @@ class StereotypesSuite extends FunSuite {
     val manchester = Stereotype("manchester", "a person from manchester",  List("manc", "mancunian", "fighter"))
 
     val stereotypes = List(australia, newZealand, preston, liverpool, manchester)
+    def find(term: String) = find(_ equalsIgnoreCase term)(term)
   }
 
   test("find by description") {
